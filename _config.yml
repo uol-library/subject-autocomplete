@@ -19,17 +19,9 @@ language: "en"
 
 # Include/exclude files from production _site
 exclude:
-    - node_modules
     - Gemfile
     - Gemfile.lock
-    - package.json
-    - package-lock.json
-    - LICENSE
-    - README.md
-    - assets/img/src
-    - assets/pdf
-    - assets/audio
-    - CNAME
+    - WAI-Aria-Combobox
 
 #      _____                
 #     / ___/____ ___________
@@ -40,6 +32,6 @@ exclude:
 
 sass:
     sass_dir: _scss
-    style: compressed
+    style: compact
 
 

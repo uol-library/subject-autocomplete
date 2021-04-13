@@ -1,27 +1,25 @@
 ---
-layout: page
-===
+layout: default
+---
 
 Subject field autocompletion
 ============================
 
-<p>The following examples use external services to perform lookups of subject authorities which are then used to
-    autocomplete fields (with a subject authority text and ID in separate inputs)</p>
-<p>Javascript used in this example is adapted from the <a
-        href="https://www.w3.org/TR/wai-aria-practices/examples/combobox/aria1.1pattern/grid-combo.html">ARIA 1.1
-        Combobox with Grid Popup Example</a> on the Web Accessibility Initiative site. You should be able to navigate
-    the page using a keyboard and use arrow keys to move between the different suggestions.</p>
-<h2>Faceted Application of Subject Terminology (FAST)</h2>
-<p>This example uses <abbr title="Faceted Application of Subject Terminology">FAST</abbr> which is derived from <abbr
-        title="Library of Congress Subject Headings">LCSH</abbr> and published by the <abbr
-        title="Online Computer Library Center">OCLC</abbr>.</p>
-<ul>
-    <li><a href="https://www.oclc.org/research/areas/data-science/fast.html">FAST overview</a></li>
-    <li><a href="http://experimental.worldcat.org/fast/assignfast/">assignFAST</a> example of autocompletionon the OCLC
-        research site</li>
-    <li><a href="https://www.oclc.org/developer/develop/web-services/fast-api.en.html">FAST API documentation</a></li>
-</ul>
-<h3>Autocomplete examples</h3>
+The following examples use external services to perform lookups of subject authorities which are then used to autocomplete fields (with a subject authority text and ID in separate inputs).
+
+Javascript used in this example is adapted from the [ARIA 1.1 Combobox with Grid Popup Example](https://www.w3.org/TR/wai-aria-practices/examples/combobox/aria1.1pattern/grid-combo.html) on the Web Accessibility Initiative site. You should be able to navigate the page using a keyboard and use arrow keys to move between the different suggestions.
+
+Faceted Application of Subject Terminology (FAST)
+-------------------------------------------------
+
+This example uses <abbr title="Faceted Application of Subject Terminology">FAST</abbr> which is derived from <abbr title="Library of Congress Subject Headings">LCSH</abbr> and published by the <abbr title="Online Computer Library Center">OCLC</abbr>.
+
+* [FAST overview](https://www.oclc.org/research/areas/data-science/fast.html)
+* [assignFAST](http://experimental.worldcat.org/fast/assignfast/) example of autocompletionon the OCLC research site
+* [FAST API documentation](https://www.oclc.org/developer/develop/web-services/fast-api.en.html)
+
+### Autocomplete examples
+
 <div class="subject-wrapper">
     <label for="fast-input1" id="fast-label1" class="combobox-label">
         FAST Subject 1
@@ -60,14 +58,17 @@ Subject field autocompletion
         <input type="text" id="fast-idinput2" readonly="readonly">
     </div>
 </div>
-<h2>Library of Congress Subject Headings (LCSH)</h2>
-<p>Library of Congress Subject Headings (LCSH) has been actively maintained since 1898 to catalog materials held at the
-    Library of Congress.</p>
-<ul>
-    <li><a href="https://id.loc.gov/">Library of Congress Linked Data Service</a></li>
-    <li><a href="https://id.loc.gov/techcenter/searching.html">Technical details of the suggest service</a></li>
-</ul>
-<h3>Autocomplete examples</h3>
+
+Library of Congress Subject Headings (LCSH)
+===========================================
+
+Library of Congress Subject Headings (LCSH) has been actively maintained since 1898 to catalog materials held at the Library of Congress.
+
+* [Library of Congress Linked Data Service](https://id.loc.gov/)
+* [Technical details of the suggest service](https://id.loc.gov/techcenter/searching.html)
+
+### Autocomplete examples
+
 <div class="subject-wrapper">
     <label for="lcsh-input1" id="lcsh-label1" class="combobox-label">
         LCSH Subject 1

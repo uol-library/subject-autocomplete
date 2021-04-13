@@ -1,21 +1,3 @@
-html {
-    box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-body {
-    max-width: 50em;
-    margin: 0 auto;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.hidden {
-    display: none;
-}
 
 .combobox-wrapper {
     display: inline-block;
