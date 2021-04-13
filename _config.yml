@@ -1,1 +1,45 @@
-theme: jekyll-theme-slate
+#
+#      _____ _ __          _____      __  __  _                 
+#     / ___/(_) /____     / ___/___  / /_/ /_(_)___  ____ ______
+#     \__ \/ / __/ _ \    \__ \/ _ \/ __/ __/ / __ \/ __ `/ ___/
+#    ___/ / / /_/  __/   ___/ /  __/ /_/ /_/ / / / / /_/ (__  ) 
+#   /____/_/\__/\___/   /____/\___/\__/\__/_/_/ /_/\__, /____/  
+#                                                 /____/        
+#
+title: "Subject field autocompletion"
+description: "The following examples use external services to perform lookups of subject authorities which are then used to autocomplete fields (with a subject authority text and ID in separate inputs)"
+url: "https://uol-library.github.io/subject-autocomplete/"
+admin_email: "p.l.edwards@leeds.ac.uk"
+repourl: "https://github.com/uol-library/subject-autocomplete/"
+markdown: kramdown
+highlight: pygments
+
+# The language setting is used in /includes/header.html for html-settings
+language: "en"
+
+# Include/exclude files from production _site
+exclude:
+    - node_modules
+    - Gemfile
+    - Gemfile.lock
+    - package.json
+    - package-lock.json
+    - LICENSE
+    - README.md
+    - assets/img/src
+    - assets/pdf
+    - assets/audio
+    - CNAME
+
+#      _____                
+#     / ___/____ ___________
+#     \__ \/ __ `/ ___/ ___/
+#    ___/ / /_/ (__  |__  )     More › http://sass-lang.com/ 
+#   /____/\__,_/____/____/      More › http://jekyllrb.com/docs/assets/#sassscss
+#                           
+
+sass:
+    sass_dir: _scss
+    style: compressed
+
+

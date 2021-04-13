@@ -1,4 +1,10 @@
-<h1>Subject field autocompletion</h1>
+---
+layout: page
+===
+
+Subject field autocompletion
+============================
+
 <p>The following examples use external services to perform lookups of subject authorities which are then used to
     autocomplete fields (with a subject authority text and ID in separate inputs)</p>
 <p>Javascript used in this example is adapted from the <a
