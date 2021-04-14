@@ -14,5 +14,6 @@ Subjects in the examples are taken from Faceted Application of Subject Terminolo
 Changelog
 ---------
 
-* 0.0.1 (14.04.2021)
-  Initial release on GitHub with jekyll based examples
+### 0.0.1 (14.04.2021)
+
+* Initial release on GitHub with jekyll based examples
