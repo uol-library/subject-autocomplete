@@ -1,6 +1,17 @@
 $bg: #fff;
 $fg: #222;
-$highlight: #ddd;
+$highlight: #efefef;
+$underline: #666;
 
 $link: #006080;
 $linkactive: #004961;
+
+/* combobox */
+$cb-bg: #fff;
+$cb-fg: #222;
+$cb-border: #aaa;
+$cb-hoverbg: #8bbde1;
+$cb-hoverfg: #000;
+$cb-focusbg: #8bbde1;
+$cb-focusfg: #000;
+$cb-focusoutline: #008000;

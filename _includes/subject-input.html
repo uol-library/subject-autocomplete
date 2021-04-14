@@ -1,0 +1,27 @@
+<div class="subject-wrapper">
+	<label for="{{ include.keyword }}-input{{ include.index }}" id="{{ include.keyword }}-label{{ include.index }}"
+		class="combobox-label">
+		{{ include.label }}
+	</label>
+	<div class="combobox-wrapper">
+		<div role="combobox" aria-expanded="false" aria-owns="{{ include.keyword }}-grid" aria-haspopup="grid"
+			id="{{ include.keyword }}-combobox{{ include.index }}">
+			<input type="text" aria-autocomplete="list" aria-controls="{{ include.keyword }}-grid{{ include.index }}"
+				id="{{ include.keyword }}-input{{ include.index }}" placeholder="Start typing for suggestions">
+		</div>
+		<div aria-labelledby="{{ include.keyword }}-label{{ include.index }}" role="grid"
+			id="{{ include.keyword }}-grid{{ include.index }}" class="grid hidden">
+		</div>
+	</div>
+	<label for="{{ include.keyword }}-idinput{{ include.index }}" id="{{ include.keyword }}-idlabel{{ include.index }}"
+		class="combobox-label right-inline">
+		ID
+	</label>
+	<div class="input-wrapper">
+		<input type="text" id="{{ include.keyword }}-idinput{{ include.index }}" readonly="readonly">
+	</div>
+</div>
+<script>
+	if (typeof cbs === 'undefined') { var cbs = []; }
+	cbs.push({ 'keyword': '{{ include.keyword }}', 'index': {{ include.index }}});
+</script>

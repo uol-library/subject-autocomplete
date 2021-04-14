@@ -1,0 +1,41 @@
+.subject-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: .25em 0;
+
+    label {
+        flex: none;
+        display: block;
+        font-weight: bold;
+
+        &.right-inline {
+            text-align: right;
+            width: auto;
+        }
+    }
+
+    .combobox-wrapper,
+    .input-wrapper {
+        flex: 1 1 auto;
+        display: block;
+    }
+
+    .combobox-wrapper {
+        display: inline-block;
+        position: relative;
+    }
+
+    .combobox-label {
+        font-weight: bold;
+        margin-right: 1em;
+    }
+
+    input {
+        font-size: inherit;
+        border: 1px solid #aaa;
+        border-radius: 2px;
+        line-height: 1.5em;
+        padding-right: 30px;
+        width: auto;
+    }
+}

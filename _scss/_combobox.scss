@@ -1,99 +1,49 @@
-
-.combobox-wrapper {
-    display: inline-block;
-    position: relative;
-}
-
-.combobox-label {
-    font-weight: bold;
-    margin-right: 1em;
-}
-.subject-wrapper {
-    display: flex;
-    flex-direction: row;
-    label {
-        flex: none;
-        display: block;
-        font-weight: bold;
-        &.right-inline {
-            text-align: right;
-            width: auto;
-        }
-    }
-    .combobox-wrapper,
-    .input-wrapper {
-        flex: 1 1 auto;
-        display: block;
-    }
-    input {
-        font-size: inherit;
-        border: 1px solid #aaa;
-        border-radius: 2px;
-        line-height: 1.5em;
-        padding-right: 30px;
-        width: auto;
-    }
-}
-
-.listbox,
 .grid {
     min-width: 230px;
-    background: white;
-    border: 1px solid #ccc;
-    list-style: none;
+    background: $cb-bg;
+    color: $cb-fg;
+    border: 1px solid $cb-border;
     margin: 0;
     padding: 0;
     position: absolute;
     top: 1.7em;
     z-index: 1;
-}
 
-.listbox .result {
-    cursor: default;
-    margin: 0;
-}
+    .result-row {
+        padding: 2px;
+        cursor: default;
+        margin: 0;
 
-.grid .result-row {
-    padding: 2px;
-    cursor: default;
-    margin: 0;
-}
+        &:hover {
+            background: $cb-hoverbg;
+            color: $cb-hoverfg;
+        }
 
-.listbox .result:hover,
-.grid .result-row:hover {
-    background: rgb(139, 189, 225);
-}
+        .result-cell {
+            display: inline-block;
+            cursor: default;
+            margin: 0;
+            padding: 0 5px;
 
-.listbox .focused,
-.grid .focused {
-    background: rgb(139, 189, 225);
-}
+            .authTitle {
+                font-weight: bold;
+            }
 
-.grid .focused-cell {
-    outline-style: dotted;
-    outline-color: green;
-}
-
-.combobox-dropdown {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 0 0 2px;
-    height: 1.5em;
-    border-radius: 0 2px 2px 0;
-    border: 1px solid #aaa;
-}
-
-.grid .result-cell {
-    display: inline-block;
-    cursor: default;
-    margin: 0;
-    padding: 0 5px;
-    .authTitle {
-        font-weight: bold;
+            .useAuth {
+                font-size: .8em;
+                color: #666;
+                text-transform: uppercase;
+            }
+        }
     }
-    .useAuth {
-        font-style: italic;
-        color:#666
+
+    .focused {
+        background: $cb-focusbg;
+        color: $cb-focusfg;
+    }
+
+    .focused-cell {
+        outline-style: dotted;
+        outline-color: $cb-focusoutline;
     }
 }
