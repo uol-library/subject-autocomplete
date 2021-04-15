@@ -24,18 +24,43 @@ function uuid() {
 		(c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
 	);
 }
-function searchFAST(searchString) {
+function searchFAST(searchString, resultsCallback) {
 	searchString = searchString.replace(/\-|\(|\)|:/g, "");
 	searchString = searchString.replace(/ /g, "%20");
 	var fastUrl = 'https://fast.oclc.org/searchfast/fastsuggest?&queryIndex=suggest50&queryReturn=suggestall%2Cidroot%2Cauth%2Ctag%2Ctype%2Craw%2Cbreaker%2Cindicator&suggest=autoSubject&query=' + searchString;
-	return getSearchPromise(fastUrl, formatFASTresults);
+	return loadJSONP(fastUrl, formatFASTresults, resultsCallback);
 }
-function searchLCSH(searchString) {
+function searchLCSH(searchString, resultsCallback) {
 	searchString = searchString.replace(/\-|\(|\)|:/g, "");
 	searchString = searchString.replace(/ /g, "%20");
 	var lcshUrl = 'https://id.loc.gov/authorities/subjects/suggest2?q=' + searchString;
-	return getSearchPromise(lcshUrl, formatLCSHresults);
+	return loadJSONP(lcshUrl, formatLCSHresults, resultsCallback);
 }
+var loadJSONP = (function(){
+	var unique = 0;
+	return function(url, formatResults, resultsCallback) {
+	  // INIT
+	  var name = "_jsonp_" + unique++;
+	  if (url.match(/\?/)) url += "&callback="+name;
+	  else url += "?callback="+name;
+	  
+	  // Create script
+	  var script = document.createElement('script');
+	  script.type = 'text/javascript';
+	  script.src = url;
+	  
+	  // Setup handler
+	  window[name] = function(data){
+		resultsCallback.call(formatResults(data));
+		document.getElementsByTagName('head')[0].removeChild(script);
+		script = null;
+		delete window[name];
+	  };
+	  
+	  // Load JSON
+	  document.getElementsByTagName('head')[0].appendChild(script);
+	};
+  })();
 function getSearchPromise(url, datacb) {
 	/* load data using JSONP and return using a promise */
 	return new Promise(rs => {
