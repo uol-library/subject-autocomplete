@@ -1,4 +1,10 @@
-
+/**
+ * @function onload
+ * @desc Initialize the combobox examples once the page has loaded
+ */
+window.addEventListener('load', function () {
+	
+});
 
 var get_terms = function(str) {
 	var match;
